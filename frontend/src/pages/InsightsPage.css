@@ -1,0 +1,79 @@
+.insights-scores { margin-bottom: 20px; }
+.scores-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.score-ring-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.score-ring { width: 100px; height: 100px; }
+.score-ring-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.score-ring-wrap { position: relative; }
+.score-ring-center {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100px; height: 100px;
+  display: flex; align-items: center; justify-content: center;
+}
+.score-ring-val { font-family: var(--font-display); font-size: 20px; font-weight: 700; }
+.score-ring-pct { font-size: 11px; color: var(--text-muted); }
+.score-ring-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-top: -4px; }
+.total-time { text-align: center; }
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.insight-msgs { display: flex; flex-direction: column; gap: 12px; }
+.insight-msg {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-elevated);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent-cyan);
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+.insight-msg__icon { color: var(--accent-cyan); flex-shrink: 0; margin-top: 1px; }
+
+.insight-recs { display: flex; flex-direction: column; gap: 12px; }
+.insight-rec {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px;
+  background: var(--bg-elevated);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent-violet);
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+.insight-rec__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent-violet);
+  font-weight: 700;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .scores-row { grid-template-columns: 1fr 1fr; }
+  .insights-grid { grid-template-columns: 1fr; }
+}

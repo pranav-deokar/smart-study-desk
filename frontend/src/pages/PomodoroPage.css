@@ -1,0 +1,98 @@
+.pomo-page { }
+
+.pomo-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+}
+
+.full-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px;
+}
+.full-timer__ring-wrap {
+  position: relative;
+  width: 220px; height: 220px;
+}
+.full-timer__ring { width: 100%; height: 100%; }
+.full-timer__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.full-timer__phase {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--accent-cyan);
+  margin-bottom: 4px;
+}
+.full-timer__time {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+.full-timer__sublabel {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+.full-timer__controls {
+  display: flex;
+  justify-content: center;
+}
+.session-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+.pomo-right { display: flex; flex-direction: column; gap: 20px; }
+
+.pomo-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.pomo-kpi { }
+
+.session-list { display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+.session-item__icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+.session-item--completed .session-item__icon { background: var(--accent-green-dim); color: var(--accent-green); }
+.session-item--stopped .session-item__icon { background: var(--accent-red-dim); color: var(--accent-red); }
+.session-item--active .session-item__icon { background: var(--accent-cyan-dim); color: var(--accent-cyan); }
+.session-item--paused .session-item__icon { background: rgba(245,158,11,0.1); color: var(--accent-amber); }
+
+.session-item__info { flex: 1; }
+.session-item__name { font-size: 13px; font-weight: 500; color: var(--text-primary); }
+.session-item__time { font-size: 11px; color: var(--text-muted); margin-top: 2px; font-family: var(--font-mono); }
+
+@media (max-width: 1100px) { .pomo-page-grid { grid-template-columns: 1fr; } }

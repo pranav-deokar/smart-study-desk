@@ -1,0 +1,37 @@
+.period-tabs { display: flex; gap: 6px; }
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.donut-card { }
+.donut-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+.donut-center-label {
+  text-align: center;
+  margin-top: -8px;
+}
+.donut-legend { display: flex; gap: 16px; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+.legend-item span:first-child { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+.chart-placeholder { padding: 40px; color: var(--text-muted); font-size: 13px; }
+
+.analytics-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.kpi-card { text-align: center; }
+
+@media (max-width: 1100px) { .analytics-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) {
+  .analytics-grid { grid-template-columns: 1fr; }
+  .analytics-kpis { grid-template-columns: 1fr 1fr; }
+}

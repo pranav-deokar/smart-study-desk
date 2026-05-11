@@ -1,0 +1,2 @@
+export const DISTANCE_THRESHOLD_CM = 55
+export const DISTANCE_CRITICAL_CM = 20
